@@ -6,13 +6,14 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 15:44:10 by isouaidi          #+#    #+#             */
-/*   Updated: 2024/07/24 15:56:51 by isouaidi         ###   ########.fr       */
+/*   Updated: 2024/07/27 20:14:23 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # pragma once
 #include <iostream>
 #include <exception>
+#include <algorithm>
 #include <vector>
 
 class Span {
@@ -25,10 +26,10 @@ class Span {
     Span();
     Span(unsigned int N);
     Span(const Span &instance);
-    Span &operator=(const Span &instance);
+    Span& operator=(const Span &instance);
     ~Span();
 
-    void addnumber(int n);
+    void addNumber(int n);
 
     int shortestSpan();
     int longestSpan();
