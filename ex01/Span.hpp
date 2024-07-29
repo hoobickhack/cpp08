@@ -6,7 +6,7 @@
 /*   By: isouaidi <isouaidi@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 15:44:10 by isouaidi          #+#    #+#             */
-/*   Updated: 2024/07/27 20:14:23 by isouaidi         ###   ########.fr       */
+/*   Updated: 2024/07/29 17:14:09 by isouaidi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <iostream>
 #include <exception>
 #include <algorithm>
+#include <limits>
 #include <vector>
 
 class Span {
@@ -30,10 +31,12 @@ class Span {
     ~Span();
 
     void addNumber(int n);
+    void addNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 
     int shortestSpan();
     int longestSpan();
-
+    
+    void printSize();
     void printSpan();
 
     class maxN : public std::exception{
@@ -48,7 +51,7 @@ class Span {
         public : 
         const char *what() const throw()
         {
-            return ("no distance found\n");
+            return ("No distance found\n");
         }
     }; 
 }; 
